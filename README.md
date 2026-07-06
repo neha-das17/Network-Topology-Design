@@ -6,7 +6,7 @@ Designed and implemented a hybrid enterprise network topology using Cisco Packet
 
 
 
-Features
+**Features**
 
 Hybrid Network Topology
 
@@ -28,7 +28,7 @@ PDU Analysis
 
 
 
-Technologies
+**Technologies**
 
 Cisco Packet Tracer
 
@@ -46,7 +46,7 @@ Switching
 
 
 
-Network Architecture
+**Network Architecture**
 
 15 Hosts
 
@@ -60,7 +60,7 @@ Network Architecture
 
 
 
-Validation
+**Validation**
 
 Ping between different networks
 
