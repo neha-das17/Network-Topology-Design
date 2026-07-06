@@ -1,0 +1,50 @@
+ROUTER CONFIGURATION
+
+Router> enable
+Router# configure terminal
+
+! Link to Router0
+Router(config)# interface Gig 0/0/0
+Router(config-if)# ip address 10.0.0.2 255.255.255.252
+Router(config-if)# no shutdown
+Router(config-if)# exit
+
+! Link to Router1
+Router(config)# interface Gig 0/0/1
+Router(config-if)# ip address 10.0.0.6 255.255.255.252
+Router(config-if)# no shutdown
+Router(config-if)# exit
+
+! Link to Router4
+Router(config)# interface Se 0/1/0 
+Router(config-if)# ip address 10.0.0.13 255.255.255.252
+Router(config-if)# no shutdown
+Router(config-if)# exit
+
+! Server connection
+Router(config)# interface Gig 0/2/0
+Router(config-if)# ip address 192.168.40.1 255.255.255.0
+Router(config-if)# no shutdown
+Router(config-if)# exit
+
+Router(config)# exit
+Router# write
+
+
+
+RIP CONGIGURATION
+
+Router> enable
+Router# configure terminal
+Router(config)# router rip
+Router(config-router)# version 2
+Router(config-router)# network 192.168.40.0
+Router(config-router)# network 10.0.0.0
+Router(config-router)# network 10.0.0.4
+Router(config-router)# network 10.0.0.12
+Router(config-router)# no auto-summary
+Router(config-router)# exit
+Router(config)# exit
+
+
+
